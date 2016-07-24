@@ -18,7 +18,11 @@
 			}
 		}
 
-		React.render(<HelloWorldComponent name="squirtle"/>, document.getElementById('container'));
+		React.render(<HelloWorldComponent name="pikachu"/>, document.getElementById('container'));
+
+		setTimeout(()=>{
+			React.render(<HelloWorldComponent name="squirtle"/>, document.getElementById('container'))
+		},2000)
 	</script><!-- definir texto como javascript -->
 	
 </body>
