@@ -12,17 +12,20 @@
 	<script src="http://fb.me/react-0.13.3.js"></script><!-- react -->
 	<script src="http://fb.me/JSXTransformer-0.13.3.js"></script><!-- transformer -->
 	<script type="text/jsx;harmony=true">
-		class  HelloWorldComponent extends React.Component{
+		class HelloWorldComponent extends React.Component{
 			render(){
-				return <h1> Hola {this.props.name} !</h1>
+				return <h1>{ this.props.name } evoluciona en nivel { this.props.level}</h1>
 			}
 		}
+		
+		HelloWorldComponent.propTypes = {
+			name: React.PropTypes.string,
+			level: React.PropTypes.number
+		};
 
-		React.render(<HelloWorldComponent name="pikachu"/>, document.getElementById('container'));
+		React.render(<HelloWorldComponent name={123} level={25} />, document.getElementById('container'));
 
-		setTimeout(()=>{
-			React.render(<HelloWorldComponent name="squirtle"/>, document.getElementById('container'))
-		},2000)
+		
 	</script><!-- definir texto como javascript -->
 	
 </body>
