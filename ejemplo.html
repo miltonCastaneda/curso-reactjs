@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hola React.js</title>
+</head>
+<body>
+	
+	<scection id="container"></scection>
+
+
+	<script src="http://fb.me/react-0.13.3.js"></script><!-- react -->
+	<script src="http://fb.me/JSXTransformer-0.13.3.js"></script><!-- transformer -->
+	<script type="text/jsx">
+		var HelloWorldComponent = React.createClass({
+			render: function(){
+				return <h1> Hola mundo!{this.props.name}</h1>
+			}
+		});
+
+		React.render(<HelloWorldComponent name="squirtle"/>, document.getElementById('container'));
+	</script><!-- definir texto como javascript -->
+	
+</body>
+</html>
